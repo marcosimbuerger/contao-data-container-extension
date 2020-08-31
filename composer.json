@@ -1,0 +1,32 @@
+{
+    "name": "marcosimbuerger/contao-data-container-extension",
+    "description": "Extends the Contao data container.",
+    "keywords": ["contao", "datacontainer", "DC"],
+    "type": "contao-bundle",
+    "license": "LGPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Marco Simbürger",
+            "homepage": "https://www.marcosimbuerger.ch"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "contao/core-bundle": "^4.4"
+    },
+    "conflict": {
+        "contao/core": "*",
+        "contao/manager-plugin": "<2.0 || >=3.0"
+    },
+    "extra": {
+        "contao-manager-plugin": "MarcoSimbuerger\\DataContainerExtensionBundle\\ContaoManager\\Plugin"
+    },
+    "autoload": {
+        "psr-4": {
+            "MarcoSimbuerger\\DataContainerExtensionBundle\\": "src/"
+        },
+        "classmap": [
+            "src/"
+        ]
+    }
+}
