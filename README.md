@@ -22,8 +22,12 @@ $GLOBALS['TL_DCA']['tl_my_module'] = array
 		(
 			array('tl_my_module', 'myOnLoadMethod'),
         ),
+        // ...
+    ),
+    // ...
+);
+  
    
-   // ...
 ```
 
 or replace/extend an existing DCA.
@@ -34,6 +38,8 @@ $GLOBALS['TL_DCA']['tl_iso_product_collection']['config']['onload_callback'][] =
 
 Add your custom method (e.g. `myDcMethod`) to the data container.
 ```php
+// tl_my_module.php
+
 public function myOnLoadMethod(DC_Table $dataContainer): void {
     $dataContainer->myDcMethod = function() {
         // do something
